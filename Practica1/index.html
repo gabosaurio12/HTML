@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mi Primera Web</title>
+</head>
+<body>
+
+    <!--Headings o títulos-->
+    <h1>HEADINGS/TÍTULOS</h1>
+    <h1>Mi primer heading h1</h1> <!--con h1 se hace un título principal-->
+    <h2>Mi segundo heading h2</h2> <!--hn donde n es el numero de titulo-->
+    <h3>Mi tercer heading h3</h3> 
+    <h4>Mi cuarto heading h4</h4>
+    <h5>Mi quinto heading h5</h5>
+    <h6>Mi sexto heading h6</h6> <!--n llega hasta 6 (h6)-->
+    
+    <hr> <!--Sirve para hacer una linea que divide el texto-->
+    
+    <!--Párrafos o texto-->
+    <h1>PÁRRAFOS / TEXTO</h1>
+    <p>Hola que tal</p> <!--<p> es de paragraph que nos permite escribir-->
+    <p>Hola bien</p>
+    <p>Mas texto</p>
+
+    <!-- Así se hace un Comentario -->
+    
+    <hr>
+
+    <!--Etiqueta Span-->
+    <h1>ETIQUETA SPAN</h1>
+    <p>
+        Este texto es <span style = "color:blue"> es para mostrar </span> la etiqueta span
+    </p> 
+    <!--la etiqueta span tiene utilidad al usarla con css (style = "color:blue") es css -->
+    <!--El objetivo de la etiqueta span es para poder identificar texto o etiqueta html dentro de otras etiquetas para poder manipularlas-->
+
+    <p>Hola a continuación haré un salto de línea: justo aquí <br> listo!</p>
+    
+    <p>Ahora, en este parrafo no se hace un salto de
+        linea, porque no se usa la etiqueta br
+    </p>
+    
+    <p>Aquí sí se haría un salto de línea
+        a pesar de que es muy parecido al anterior <br> pero
+        como estamos usando la etiqueta br sí se crea el salto
+    </p>
+    
+    <hr>
+
+    <!--Hipervínculos-->
+    <h1>HIPERVÍNCULOS</h1>
+    <!--Hipervinculos <a> anchor-->
+    <a href = "https://www.google.com.mx/?hl=es">Ir a google</a>
+    <!-- Para abrirlo en otra pestaña-->
+    <br>
+    <a target = "_blank" href = https://www.google.com.mx/?hl=es">Ir a google en nueva pestaña</a>
+
+    <hr>
+
+    <!--Imágenes-->
+    <!--Con la liga-->
+    <h1>IMÁGENES</h1>
+    <p>Foto de la web</p>
+    <img src = "https://png.pngtree.com/background/20230612/original/pngtree-wolf-animals-images-wallpaper-for-pc-384x480-picture-image_3180467.jpg" />
+    
+    <!--Con una de mi pc en la misma carpeta del index-->
+    <p>Foto en mi PC en la misma carpeta de index</p>
+    <img src = "KH.jpg" />
+    
+    <!--Con una en otra carpeta, en este caso img-->
+    <p>Foto en mi PC en otra carpeta</p>
+    <img src = "img/DBS.jpg" />
+
+    <!--Configurando tamaños con width-->
+
+    <p>Foto de la web con width = "400" </p>
+    <img src = "https://png.pngtree.com/background/20230612/original/pngtree-wolf-animals-images-wallpaper-for-pc-384x480-picture-image_3180467.jpg" width = "400" />
+    
+    <p>Foto en mi PC con width = "400"</p>
+    <img src = "KH.jpg" width = "400" />
+    
+    <p>Foto en mi PC con width = "400" </p>
+    <img src = "img/DBS.jpg" width = "400" />
+
+    <!--Tambien se puede usar height-->
+    <p>Foto en mi PC con height = "400" </p>
+    <img src = "img/DBS.jpg" height = "400" />
+
+    <!--Si solo se usa un valor (height / width) se mantendrá la relación-aspecto-->
+    <!--Si le damos los dos, forzaremos ese tamaño-->
+    <p>Foto con width = "200"</p>
+    <img src = "img/DBS.jpg" width = "200" />
+
+    <p>Foto con height = "200"</p>
+    <img src = "img/DBS.jpg" height = "200" />
+
+    <p>Foto con "200 x 200"</p>
+    <img src = "img/DBS.jpg" height = "200" width = "200" />
+
+    <hr>
+
+    <!--Formularios-->
+    <h1>FORMULARIOS</h1>
+    <p>Input que se activa solo presionando el input</p>
+    <form>
+        <!--La etiqueta label sirve para nombrar el campo de texto-->
+        <label>Nombre</label>
+        <!--Es un cuadro de texto para ingresar datos-->
+        <input />
+    </form>
+    
+    <!--En caso de que queramos que si presionamos el label también se active el input-->
+    <p>Input que se activa presionando el label</p>
+    <form>
+        <label for = "nombre">Nombre</label>
+        <input id = "nombre" />
+    </form>
+
+    <!--Propiedad name-->
+    
+    <!--Propiedad placeholder: Se usa para indicar lo que se debe escribir-->
+    <p>Input que muestra dentro lo que se debe escribir</p>
+    <form>
+        <label>Nombre</label>
+        <input placeholder = "Ej. Gabriel" />
+    </form>
+
+    <hr>
+
+    <!--Tipos de input type = "tipo de input"-->
+    <h1>Tipos de input</h1>
+
+    <h2>"submit"</h2>
+    <form>
+        <label>Submit</label>
+        <input type = "submit" />
+    </form>
+   
+    <h2>"text" (es el default)</h2>
+    <form>
+        <label>Texto</label>
+        <input type = "text" />
+    </form>
+   
+    <h2>"email"</h2>
+    <form>
+        <label>Email</label>
+        <input type = "email" />
+    </form>
+   
+    <h2>"password"</h2>
+    <form>
+        <label>Password</label>
+        <input type = "password" />
+    </form>
+   
+    <h2>"radio"</h2>
+    <form>
+        <label>Radio</label>
+        <input type = "radio" />
+    </form>
+   
+    <h2>"checkbox"</h2>
+    <form>
+        <label>Checbox</label>
+        <input type = "checkbox" />
+    </form>
+   
+    <h2>"file"</h2>
+    <form>
+        <label>File</label>
+        <input type = "file" />
+    </form>
+
+    <h3>Se pueden colocar varios input en un form</h3>
+    <form>
+        <label>Nombre</label>
+        <input />
+        <br> <!--Sin esto estarían seguidos-->
+        <label>Apellido</label>
+        <input />
+    </form>
+
+    <hr>
+
+    <h3>Textarea</h3>
+    <form>
+        <label for = "comentario">Comentario</label>
+        <br>
+        <textarea rows = "10" cols = "30" id = "comentario" placeholder="Ingresa un comentario" name = comentario ></textarea>
+    </form>
+
+    <hr>
+
+    <h1>Mandando los datos de un form a un servidor</h1>
+    <!--Métodos de action para enviar datos-->
+    <!--GET: Se genera una url con los campos y envía por ahí los datos, máximo 255 caracteres-->
+    <!--POST: No se genera una url pero se envían los datos-->
+
+    <form action = "/formulario" method = "GET" >
+        <label for = "nombre2">Nombre</label>
+        <input type = "text" id = "nombre2" name = "nombre" />
+        <br>
+        <label for = "apellido2" >Apellido</label>
+        <input type = "text" id = "apellido2" name = "apellido" />
+        <br>
+        <label for = "comentario2" >Comentario</label>
+        <br>
+        <textarea cols = "30" rows = "5" id = "comentario2" placeholder = "Ingresa un comentario" name = comentario ></textarea>
+        <br>
+        <input type = "submit" />
+
+    </form>
+
+    
+    
+</body>
+</html>
