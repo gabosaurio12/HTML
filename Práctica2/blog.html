@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <title>Mi blog</title>
+</head>
+<body>
+    <!-- la etiqueta header se usa para agrupar links, imagenes o logos -->
+    <!-- se pueden crear x etiquetas de header siempre y cuando
+        no haya una dentro de otra
+        no se puede colocar una dentro de una etiqueta footer -->
+
+    <header>
+        <!-- el id es un atributo, nos sirve para interactuar con los elementos mediante JS o CSS -->
+        <!-- no se deben identificar dos elementos con el mismo nombre-->
+        <!-- si se quiere identificar más de un elemento con el mismo nombre se usa el atributo class
+            NO TENER ATRIBUTOS CLASS CON EL MISMO NOMBRE DE ATRIBUTOS ID -->
+
+        <h1 id="titulo" >Blog de práctica HTML</h1>
+    </header>
+
+    <!-- div contiene el contenido, tiene la misma funcionalidad que section, se usa para poder agruparlo en secciones-->
+    <!-- Una etiqueta div dentro de otra lo que hace es dividir una sección dentro de otra, 
+        no es recomendable anidarlos porque sí-->
+
+    <div>
+        <p>Soy un párrafo dentro de un div</p>
+    </div>
+
+    <!-- la etiqueta section define secciones dentro del sitio, podemos colocar las etiquetas que queramos -->
+    <section>
+        <!-- article se usa para definir contenido independiente posts por ejemplo -->
+        <!-- se puede usar para enmarcar alguna cosas como un post o imagen o tweet por ejemplo -->
+        <article class="post">
+            <h1>Título de mi post</h1>
+            <p>Descripción de mi post</p>
+            <img src="img/DBS.jpg" width="350" />
+            <p>Texto del artículo y es texto de prueba</p>
+        </article>
+
+        <article class="post">
+            <h1>Título de mi post 2</h1>
+            <p>Descripción de mi post 2</p>
+            <img src="img/DBZ.png" width="350" />
+            <p>Texto del artículo y es texto de prueba</p>
+        </article>
+
+        <article class="post">
+            <h1>Título de mi post 3</h1>
+            <p>Descripción de mi post 3</p>
+            <img src="img/DBZK.jpg" width="350" />
+            <p>Texto del artículo y es texto de prueba</p>
+        </article>
+
+    </section>
+
+    <!-- la etiqueta footer se usa para copyright, links, contacto, como navegar dentro del sitio, etc -->
+    <footer>
+        <!-- mailto: nos sirve para crear un hipervínculo y que cuando le demos clic 
+            habra el cliente de correo y agregue el contacto que ingresamos-->
+
+        <!-- con a href="#nombre del id" podemos crear un link que nos envía a esa sección de la págian web -->
+
+        <a href="#titulo">Ir al comienzo</a>
+        <br>
+        <a href="mailto:gabgonlo05@gmail.com" >Contáctame por correo</a>
+        <p>Copyright 2024</p>
+    </footer>
+
+</body>
+</html>

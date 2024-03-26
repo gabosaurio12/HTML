@@ -2,6 +2,17 @@
 <html lang="en">
 <head>
     <title>Mi Primera Web</title>
+
+    <!-- CSS -->
+    <!-- Usamos style para asignar estilos -->
+    <!-- Se le asigna el estilo entre las llaves a lo que se escribe antes, en este caso table, th y td -->
+
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -196,21 +207,200 @@
     <!--Métodos de action para enviar datos-->
     <!--GET: Se genera una url con los campos y envía por ahí los datos, máximo 255 caracteres-->
     <!--POST: No se genera una url pero se envían los datos-->
+    <h2>Con GET</h2>
 
-    <form action = "/formulario" method = "GET" >
-        <label for = "nombre2">Nombre</label>
-        <input type = "text" id = "nombre2" name = "nombre" />
+    <!--El autocomplete lo que hace es no guardar los datos de un input cuando se actualiza la página-->
+
+    <form action="/formulario1" method="get" autocomplete="off">
+        <label for = "nombref1">Nombre</label>
+        <input type = "text" id = "nombref1" name = "nombre" />
         <br>
-        <label for = "apellido2" >Apellido</label>
-        <input type = "text" id = "apellido2" name = "apellido" />
+        <label for = "apellidf1" >Apellido</label>
+        <input type = "text" id = "apellidof1" name = "apellido" />
         <br>
-        <label for = "comentario2" >Comentario</label>
+        <label for = "comentariof1" >Comentario</label>
         <br>
-        <textarea cols = "30" rows = "5" id = "comentario2" placeholder = "Ingresa un comentario" name = comentario ></textarea>
+        <textarea cols = "30" rows = "5" id = "comentariof1" placeholder = "Ingresa un comentario" name = comentario ></textarea>
         <br>
         <input type = "submit" />
 
     </form>
+
+    <h2>Con POST</h2>
+
+    <form action="/formulario2" method="post" autocomplete="off">
+        <label for="nombref2">Nombre</label>
+        <input type="text" id="nombref2" name="nombre" />
+        <br>
+        <label for="apellidof2">Apellido</label>
+        <input type="text" id="apellidof2" name="apellido" />
+        <br>
+        <label for="comentariof2">Comentario</label>
+        <br>
+        <textarea cols="30" rows="5" id="comentariof2" placeholder="Ingresa un comentario" name="comentario" ></textarea>
+        <br>
+        <input type="submit" />
+
+    </form>
+
+    <h2>Mandando valores por defecto</h2>
+    <!--value permite declarar un valor por defecto en el input en los inpnut-->
+    <!--Para los textarea debe ingresarse entre >< como se muestra en la línea 248, value no servirá-->
+
+    <form action="/formulario3" method="get" autocomplete="off">
+        <label for="nombref3">Nombre</label>
+        <input value="Jerry" type="text" id="nombref3" name="nombre" />
+        <br>
+        <label for="apellidof3">Apellido</label>
+        <input value="Tom" "text" id="apellidof3" name="apellido" />
+        <br>
+        <label for="comentariof3">Comentario</label>
+        <br>
+        <textarea cols="30" rows="5" id="comentariof3" placeholder="Ingresa un comentario" name="comentario" >Valor por defecto</textarea>
+        <br>
+        <input type="submit" />
+    </form>
+
+    <!--BOTONES-->
+    <h1>BOTONES</h1>
+    <!--Usamos la etiqueta button y es importante escribir el type-->
+        
+    <form action="/formBotones" method="get" autocomplete="off">
+        <label for = "nombrefb">Nombre</label>
+        <input value="Charmander" type = "text" id = "nombrefb" name = "nombre" />
+        <br>
+        <label for = "apellidofb" >Apellido</label>
+        <input value="Squirtle" type = "text" id = "apellidofb" name = "apellido" />
+        <br>
+        <label for = "comentariofb" >Comentario</label>
+        <br>
+        <textarea cols = "30" rows = "5" id = "comentariofb" placeholder = "Ingresa un comentario" name = comentario >Bulbasaur, esos son los pokemon iniciales</textarea>
+        <br>
+        
+        <h2>Botón tipo button</h2>
+        <!--Con Js se especifica el comportamiento del botón-->
+        <button type="button" >Enviar</button>
+
+        <h2>Boton tipo reset</h2>
+        <!--Envía el formulario como en un input type submit-->
+        <button type="reset" >Reset</button>
+
+        <h2>Botón tipo submit</h2>
+        <!--reset deja todos los valores por defecto-->
+        <button type="submit" >Submit</button>
+
+        <h2>Botón tipo button con imagen</h2>
+        <!--Con Js se especifica el comportamiento del botón-->
+        <button type="button" ><img src="img/DBS.jpg" width="100"> Enviar</button>
+    
+    </form>
+
+    <h1>LISTAS</h1>
+
+    <h2>Listas no ordeadas</h2>
+    <!--ul es lista on ordenada, es decir • -->
+    <!--li list item-->
+    
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+
+    <h2>Listas ordenadas</h2>
+    <!--ol es lista ordenada, es decir números-->
+    
+    <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ol>
+
+    <h2>Listas ordenadas desde un valor específico</h2>
+    <!--Esto se logra con value despues del li-->
+
+    <ol>
+        <li value="10" >Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ol>
+
+    <h2>Anidar listas</h2>
+     <!-- Se logra anidando listas dentro de los items-->
+     <!-- Para cambiar el estilo de las listas anidadas se usa list-style-type: *estilo* -->
+
+    <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>
+            <ol>
+                <li style="list-style-type:lower-alpha" >Sub elemento 1</li>
+                <li style="list-style-type:lower-alpha" >Sub elemento 2</li>
+                <li style="list-style-type:lower-alpha" >Sub elemento 3</li>
+            </ol>
+        </li>
+    </ol>
+
+    <!-- TABLAS -->
+    <h1>TABLAS</h1>
+    <!-- Se usa table como etiqueta -->
+    <!-- tr significa table row, o fila dentro de la tabla -->
+    <!-- Para indicar que lo que ingresaremos en tr es una cabecera se usa th -->
+    <!-- Cada th agrega una columna, pero un td tambien! -->
+    <!-- Elementos agregados con th se encuentran alineados con la columna -->
+    <!-- Elementos agregados con td se encuentran alineados a la izquierda -->
+
+    <!-- Para agregar un espacio entre cada elemento para mejorar la legibilidad se usa dentro de <table> style="border: 1px solid black;" -->
+    <!-- Se puede hacer lo anterior en CSS en el head -->
+    <!-- Para ajustar el ancho de las celdas se usa style dentro de <table> style="width: cantidad px;"-->
+    <!-- Siempre que trabajamos con style usamos ; al final-->
+
+    <table style="width: 250px;" >
+        <!-- thead nos sirve para agrupar elementos que se encuentren en las cabeceras de la tabla -->
+        <thead>
+            <tr>
+                <th>Precio</th>
+                <th>Producto</th>
+            </tr>
+        </thead>        
+
+    <!-- td se usa para poder definir elementos std que se encuentran dentro celdas de nuestra tabla -->
+
+        <!-- tbody se usa para que algunos exploradores web puedan habilitar un scroll del contenido separado de la cabecera y el pie de la tabla -->       
+
+        <tbody>
+            <tr>
+                <td>Pan</td>
+                <td>Gratis</td>
+            </tr>
+
+            <tr>
+                <td>Mayonesa</td>
+                <td>$35.00</td>
+            </tr>
+
+            <tr>
+                <td>Refresco</td>
+                <td>$20.00</td>
+            </tr>
+        </tbody>
+
+        <!-- Pie de la tabla, en este caso se aparece el total -->
+        <tfoot>
+            <td></td>
+            <td>Total: $55</td>
+        </tfoot>
+            
+
+
+    </table>
+
+
 
     
     
